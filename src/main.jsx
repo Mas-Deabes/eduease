@@ -1,13 +1,16 @@
-import React from "react";
-import ReactDOM from "react-dom/client"
-import App from "./App"
-import "./styles/global.css" //importing the css here applies the theme to the entire app as this is the starting point
-import { AuthProvider } from "./context/AuthContext";
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import { BrowserRouter } from 'react-router-dom'
+import App from './App'
+import { AuthProvider } from './context/AuthContext'
+import './styles/global.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <AuthProvider>
-    <App />
-    </AuthProvider>
+    <BrowserRouter>
+      <AuthProvider>
+        <App />
+      </AuthProvider>
+    </BrowserRouter>
   </React.StrictMode>
-) 
+)
