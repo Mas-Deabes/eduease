@@ -5,6 +5,8 @@ import Login from './pages/Login'
 import Register from './pages/Register'
 import Dashboard from './pages/Dashboard'
 import Discussions from './pages/Discussions'
+import Modules from './pages/Modules'
+import Assignments from './pages/Assignments'
 
 function PrivateRoute({ children }) {
   const { user, loading } = useAuth()
@@ -28,6 +30,9 @@ export default function App() {
         <Route index element={<Navigate to="/dashboard" replace />} />
         <Route path="dashboard" element={<Dashboard />} />
         <Route path="discussions" element={<Discussions />} />
+        <Route path="modules" element={<Modules/>} />
+        <Route path="assignments" element={<Assignments/>} />
+
       </Route>
 
       <Route path="*" element={<Navigate to="/login" replace />} />
