@@ -2,10 +2,7 @@ import { useEffect, useState } from 'react'
 import { collection, query, where, getDocs } from 'firebase/firestore'
 import { db } from '../lib/firebase'
 import { useAuth } from '../context/AuthContext'
-import {
-  BarChart, Bar, XAxis, YAxis,
-  Tooltip, ResponsiveContainer, Cell
-} from 'recharts'
+import {BarChart, Bar, XAxis, YAxis, ResponsiveContainer, Cell } from 'recharts'
 
 function ProgressRing({ pct, color = 'var(--blue)' }) {
   const size = 90
@@ -151,14 +148,6 @@ export default function Dashboard() {
                 tick={{ fontSize: 12, fill: '#6b7280' }}
               />
               <YAxis hide />
-              <Tooltip
-                cursor={{ fill: 'var(--blue-light)' }}
-                contentStyle={{
-                  borderRadius: 8,
-                  border: '1px solid var(--border)',
-                  fontSize: 13
-                }}
-              />
               <Bar dataKey="quizzes" radius={[4, 4, 0, 0]}>
                 {studyData.map((_, i) => (
                   <Cell
