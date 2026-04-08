@@ -7,6 +7,7 @@ import Dashboard from './pages/Dashboard'
 import Discussions from './pages/Discussions'
 import Modules from './pages/Modules'
 import Assignments from './pages/Assignments'
+import Quiz from './pages/Quiz'
 
 function PrivateRoute({ children }) {
   const { user, loading } = useAuth()
@@ -32,6 +33,7 @@ export default function App() {
         <Route path="discussions" element={<Discussions />} />
         <Route path="modules" element={<Modules/>} />
         <Route path="assignments" element={<Assignments/>} />
+        <Route path="quiz/:quizId" element={<Quiz />} />
 
       </Route>
 
