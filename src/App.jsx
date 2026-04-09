@@ -8,6 +8,9 @@ import Discussions from './pages/Discussions'
 import Modules from './pages/Modules'
 import Assignments from './pages/Assignments'
 import Quiz from './pages/Quiz'
+import InstructorOverview from './pages/InstructorOverview'
+import QuizCreator from './pages/QuizCreator'
+
 
 function PrivateRoute({ children }) {
   const { user, loading } = useAuth()
@@ -31,10 +34,11 @@ export default function App() {
         <Route index element={<Navigate to="/dashboard" replace />} />
         <Route path="dashboard" element={<Dashboard />} />
         <Route path="discussions" element={<Discussions />} />
-        <Route path="modules" element={<Modules/>} />
-        <Route path="assignments" element={<Assignments/>} />
+        <Route path="modules" element={<Modules />} />
+        <Route path="assignments" element={<Assignments />} />
         <Route path="quiz/:quizId" element={<Quiz />} />
-
+        <Route path="students" element={<InstructorOverview />} />
+        <Route path="quiz-creator" element={<QuizCreator />} />
       </Route>
 
       <Route path="*" element={<Navigate to="/login" replace />} />
