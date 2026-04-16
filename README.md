@@ -1,4 +1,4 @@
-https://eduease-self.vercel.app/login
+https://eduease-self.vercel.app/
 
 # React + Vite
 
