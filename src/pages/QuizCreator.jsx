@@ -52,7 +52,7 @@ export default function QuizCreator() {
     setTimeout(() => setSaved(false), 3000)
   }
 
-  return (
+  return ( 
     <div>
       <h1 style={styles.h1}>Quiz Creator</h1>
       <p style={styles.sub}>Create a quiz for your students</p>
