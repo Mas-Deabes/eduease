@@ -31,7 +31,7 @@ function StatCard({ label, value, sub, color = 'var(--blue)' }) {
     <div style={{ ...styles.statCard, borderTop: `3px solid ${color}` }}>
       <div style={{ fontSize: 28, fontWeight: 700, color }}>{value}</div>
       <div style={{ fontWeight: 600, fontSize: 14, marginTop: 2 }}>{label}</div>
-      {sub && <div style={{ fontSize: 12, color: 'var(--text-muted)', marginTop: 2 }}>{sub}</div>}S
+      {sub && <div style={{ fontSize: 12, color: 'var(--text-muted)', marginTop: 2 }}>{sub}</div>}
     </div>
   )
 }
